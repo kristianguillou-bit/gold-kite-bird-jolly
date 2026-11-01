@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Banjoür — Home",
+      "hasCanvas": false,
+      "bodyTextLen": 565,
+      "bodyTextHash": "8bb66f56835f819254436a59c5b349a4cced8573fb9ec8e51b6f1c89dc756d61",
+      "bodyTextPrefix": "Skip to content Banjoür Home Path Progress 0 day streak 0 XP Gue",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Banjoür — Home",
+      "hasCanvas": false,
+      "bodyTextLen": 565,
+      "bodyTextHash": "e809b32b33893c92ccdeacc409cc2322c583dac27d93ba88432d7d3dbb0e5b2e",
+      "bodyTextPrefix": "Skip to content Banjoür 0 day streak 0 XP Guernesiais for Guerns",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

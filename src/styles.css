@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --font-sans: "Nunito", "Avenir Next", "Trebuchet MS", sans-serif;
+
+  --color-sand: #f6f1e6;
+  --color-sand-deep: #e7decc;
+  --color-foam: #fffdf8;
+  --color-ink: #1c2c33;
+  --color-ink-soft: #3e5158;
+  --color-line: #e3d9c6;
+
+  --color-sea: #1a6d78;
+  --color-sea-deep: #0f3e46;
+  --color-sea-soft: #e5f3f1;
+
+  --color-gold: #9a7014;
+  --color-gold-soft: #f8edd4;
+
+  --color-coral: #9e3d32;
+  --color-coral-soft: #f8e8e4;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-sand);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sea);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-sea-soft);
+  }
+}
+
+.panel {
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-foam);
+  box-shadow: 0 14px 34px -22px rgb(28 44 51 / 0.45);
+}
+
+.lesson-shell {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.tabbar {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 220ms ease-out;
+}
+
+@keyframes nugde {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: nugde 280ms ease-in-out;
+}
+
+@keyframes speaking-pulse {
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.speaking {
+  animation: speaking-pulse 0.9s ease-in-out infinite;
+}
+
+.press:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .shake,
+  .speaking {
+    animation: none !important;
+  }
+
+  .press:active {
+    transform: none;
+  }
+}
